@@ -1,0 +1,48 @@
+body {
+    font-family: Tahoma, sans-serif;
+}
+
+#game-board {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+}
+
+#game-board > div {
+    animation: color-animation 8s infinite ease-in, left 0.65s infinite;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+
+.controls {
+    position: absolute;
+    background: red;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+}
+
+.controls > div {
+    display: inline-block;
+}
+
+@keyframes color-animation {
+    0% {
+        background-color: yellow;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes left {
+    0% { transform: translate(100px); }
+    50% { transform: translate(-100px); }
+    100% { transform: translate(100px); }
+}
